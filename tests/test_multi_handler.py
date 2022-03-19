@@ -1,11 +1,13 @@
 from pathlib import Path
 import os
 import sys
-sys.path.append(os.fspath(Path(__file__).parent.parent.resolve()))
+path = os.fspath((Path(__file__).parent.parent / 'src').resolve())
+if path not in sys.path:
+    sys.path.append(path)
 
 import unittest
 
-from src.multi_handler import MultiHandler
+from handlerchief.multi_handler import MultiHandler
 
 
 class SumHandler(MultiHandler):

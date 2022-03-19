@@ -1,12 +1,14 @@
 from pathlib import Path
 import os
 import sys
-sys.path.append(os.fspath(Path(__file__).parent.parent.resolve()))
+path = os.fspath((Path(__file__).parent.parent / 'src').resolve())
+if path not in sys.path:
+    sys.path.append(path)
 
 from typing import Tuple
 import unittest
 
-from src.i_middleware_handler import IMiddlewareHandler
+from handlerchief.i_middleware_handler import IMiddlewareHandler
 
 
 class SumHandler(IMiddlewareHandler):

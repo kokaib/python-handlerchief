@@ -1,11 +1,13 @@
 from pathlib import Path
 import os
 import sys
-sys.path.append(os.fspath(Path(__file__).parent.parent.resolve()))
+path = os.fspath((Path(__file__).parent.parent / 'src').resolve())
+if path not in sys.path:
+    sys.path.append(path)
 
 import unittest
 
-from src.pipe_handler import PipeHandler
+from handlerchief.pipe_handler import PipeHandler
 
 
 class SumHandler(PipeHandler):
