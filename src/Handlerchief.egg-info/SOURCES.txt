@@ -5,12 +5,13 @@ setup.cfg
 src/Handlerchief.egg-info/PKG-INFO
 src/Handlerchief.egg-info/SOURCES.txt
 src/Handlerchief.egg-info/dependency_links.txt
-src/Handlerchief.egg-info/requires.txt
 src/Handlerchief.egg-info/top_level.txt
 src/handlerchief/__init__.py
 src/handlerchief/chain_handler.py
 src/handlerchief/error_wrapper.py
+src/handlerchief/i_builder.py
 src/handlerchief/i_handler.py
 src/handlerchief/i_middleware_handler.py
 src/handlerchief/multi_handler.py
 src/handlerchief/pipe_handler.py
+src/handlerchief/simple_handler_builder.py
